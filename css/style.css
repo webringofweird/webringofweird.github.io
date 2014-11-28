@@ -12,3 +12,11 @@ body {
 	color: white;
 	font-family: 'Times New Roman', serif;
 }
+
+a {
+	color: yellow;
+}
+
+a:visited {
+	color: orange;
+}
