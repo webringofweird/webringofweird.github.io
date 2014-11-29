@@ -13,6 +13,15 @@ body {
 	font-family: 'Times New Roman', serif;
 }
 
+h1 {
+	font-weight: normal;
+	font-style: italic;
+	font-size: 3rem;
+	letter-spacing: 0.3rem;
+	word-spacing: 0.5rem;
+	text-shadow: 2px 2px 0px #999;
+}
+
 a {
 	color: yellow;
 }

@@ -59,7 +59,7 @@
 			innerHTML = 
 				'<table><tr>' +
 				'<td class="wow-prev">&lt;&lt; <a href="' + prevSite.url + '">' + prevSite.title + '</a></td>' +
-				'<td class="wow-center"><p><a href="">[ webring of weird ]</a></p></td>' +
+				'<td class="wow-center"><p><a href="https://webringofweird.github.io">[ webring of weird ]</a></p></td>' +
 				'<td class="wow-next"><a href="' + nextSite.url + '">' + nextSite.title + '</a> &gt;&gt;</td>' + // TODO ESCAPEEEE!!!
 				'</tr></table>';
 		}
