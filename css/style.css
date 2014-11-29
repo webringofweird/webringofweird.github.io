@@ -13,13 +13,27 @@ body {
 	font-family: 'Times New Roman', serif;
 }
 
-h1 {
+h1, h2 {
 	font-weight: normal;
 	font-style: italic;
+}
+
+h1 {
 	font-size: 3rem;
 	letter-spacing: 0.3rem;
 	word-spacing: 0.5rem;
 	text-shadow: 2px 2px 0px #999;
+	margin: 2rem 0;
+}
+
+h2 {
+	font-size: 2rem;
+	text-shadow: 1px 1px 0px #999;
+	margin: 1.5rem 0;
+}
+
+p {
+	margin: 0.8rem 0;
 }
 
 a {
@@ -90,5 +104,6 @@ a:visited {
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
+	/* I designed this super curve using the firefox devtools animation editor */
 	animation-timing-function: cubic-bezier(0.58,0.44,0.4,0.46);
 }
