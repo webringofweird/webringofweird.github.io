@@ -107,3 +107,8 @@ a:visited {
 	/* I designed this super curve using the firefox devtools animation editor */
 	animation-timing-function: cubic-bezier(0.58,0.44,0.4,0.46);
 }
+
+.wow-center p span {
+	font-size: 0.8rem;
+	font-style: italic;
+}

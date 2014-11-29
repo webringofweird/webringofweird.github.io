@@ -59,13 +59,14 @@
 			innerHTML = 
 				'<table><tr>' +
 				'<td class="wow-prev">&lt;&lt; <a href="' + prevSite.url + '">' + prevSite.title + '</a></td>' +
-				'<td class="wow-center"><p><a href="https://webringofweird.github.io">[ webring of weird ]</a></p></td>' +
+				'<td class="wow-center"><p><a href="https://webringofweird.github.io">[ webring of weird ]</a><br /><span>linking ' + sites.length + ' sites together</span></p></td>' +
 				'<td class="wow-next"><a href="' + nextSite.url + '">' + nextSite.title + '</a> &gt;&gt;</td>' + // TODO ESCAPEEEE!!!
 				'</tr></table>';
 		}
 
 		div.className = 'wow-root';
 		div.innerHTML = innerHTML;
+		
 		document.body.insertBefore(div, script.nextSibling);
 	}
 
