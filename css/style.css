@@ -21,22 +21,45 @@ a:visited {
 	color: orange;
 }
 
+@keyframes links_animation {
+	from {
+		background: #444;
+	}
+	to {
+		background: #666;
+	}
+}
+
+@keyframes center_animation {
+	from {
+		background: #666;
+	}
+	to {
+		background: #444;
+	}
+}
+
 .wow-root {
 	border: 0.3rem white groove;
 	display: table;
-	xpadding: 1rem;
 }
 
 .wow-prev,
 .wow-center,
 .wow-next {
 	padding: 1rem 2rem;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 .wow-prev, .wow-next {
 	background: #444;
+	animation-name: links_animation;
 }
 
 .wow-center {
 	background: #666;
+	animation-name: center_animation;
 }
+
