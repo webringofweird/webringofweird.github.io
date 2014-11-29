@@ -56,9 +56,15 @@
 			var prevSite = sites[prevIndex];
 			var nextSite = sites[nextIndex];
 
-			innerHTML = '&lt;&lt; <a href="' + prevSite.url + '">' + prevSite.title + '</a> [ webring of weird ] ' + '<a href="' + nextSite.url + '">' + nextSite.title + '</a> &gt;&gt;'; // TODO ESCAPEEEE!!!
+			innerHTML = 
+				'<table><tr>' +
+				'<td class="wow-prev">&lt;&lt; <a href="' + prevSite.url + '">' + prevSite.title + '</a></td>' +
+				'<td class="wow-center">[ webring of weird ]</td>' +
+				'<td class="wow-next"><a href="' + nextSite.url + '">' + nextSite.title + '</a> &gt;&gt;</td>' + // TODO ESCAPEEEE!!!
+				'</tr></table>';
 		}
 
+		div.className = 'wow-root';
 		div.innerHTML = innerHTML;
 		document.body.insertBefore(div, script.nextSibling);
 	}

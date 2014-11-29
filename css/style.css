@@ -20,3 +20,23 @@ a {
 a:visited {
 	color: orange;
 }
+
+.wow-root {
+	border: 0.3rem white groove;
+	display: table;
+	xpadding: 1rem;
+}
+
+.wow-prev,
+.wow-center,
+.wow-next {
+	padding: 1rem 2rem;
+}
+
+.wow-prev, .wow-next {
+	background: #444;
+}
+
+.wow-center {
+	background: #666;
+}
