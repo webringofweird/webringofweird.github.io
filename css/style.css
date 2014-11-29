@@ -24,9 +24,11 @@ a:visited {
 @keyframes links_animation {
 	from {
 		background: #444;
+		border-color: #fff;
 	}
 	to {
 		background: #666;
+		border-color: #000;
 	}
 }
 
@@ -39,8 +41,18 @@ a:visited {
 	}
 }
 
+@keyframes center_link_animation {
+	from {
+		transform: translateY(0.25rem);
+	}
+
+	to {
+		transform: translateY(-0.25rem);
+	}
+}
+
 .wow-root {
-	border: 0.3rem white groove;
+	border: 1px white groove;
 	display: table;
 }
 
@@ -56,6 +68,7 @@ a:visited {
 .wow-prev, .wow-next {
 	background: #444;
 	animation-name: links_animation;
+	border: 1px solid white;
 }
 
 .wow-center {
@@ -63,3 +76,10 @@ a:visited {
 	animation-name: center_animation;
 }
 
+.wow-center p {
+	animation-name: center_link_animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(0.58,0.44,0.4,0.46);
+}
