@@ -41,13 +41,14 @@
 		var div = document.createElement('div');
 		var sites = data.sites;
 		var ringURL = script.getAttribute('data-url');
-		var innerHTML = '';
+		var innerHTML = '<table><tr>';
+		var centerTD = '<td class="wow-center"><p><a href="https://webringofweird.github.io">[ webring of weird ]</a><br /><span>linking ' + sites.length + ' sites together</span></p></td>';
 
 		var index = findPosition(sites, ringURL);
 
 		if(index === -1) {
 			// render 'reduced' webring?
-			innerHTML = 'url missing, just have a random one';
+			innerHTML += centerTD;
 		} else {
 			var prevIndex = --index < 0 ? sites.length - 1 : index;
 			var nextIndex = ++index === sites.length ? 0 : index;
@@ -56,13 +57,14 @@
 			var prevSite = sites[prevIndex];
 			var nextSite = sites[nextIndex];
 
-			innerHTML = 
-				'<table><tr>' +
+			innerHTML += 
 				'<td class="wow-prev">&lt;&lt; <a href="' + prevSite.url + '">' + prevSite.title + '</a></td>' +
-				'<td class="wow-center"><p><a href="https://webringofweird.github.io">[ webring of weird ]</a><br /><span>linking ' + sites.length + ' sites together</span></p></td>' +
-				'<td class="wow-next"><a href="' + nextSite.url + '">' + nextSite.title + '</a> &gt;&gt;</td>' + // TODO ESCAPEEEE!!!
-				'</tr></table>';
+				centerTD +
+				'<td class="wow-next"><a href="' + nextSite.url + '">' + nextSite.title + '</a> &gt;&gt;</td>'; // TODO ESCAPEEEE!!!
+
 		}
+
+		innerHTML += '</tr></table>';
 
 		div.className = 'wow-root';
 		div.innerHTML = innerHTML;
