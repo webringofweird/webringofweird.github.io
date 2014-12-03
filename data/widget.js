@@ -42,17 +42,19 @@
 		var sites = data.sites;
 		var ringURL = script.getAttribute('data-url');
 		var innerHTML = '<table><tr>';
-		var centerTD = '<td class="wow-center"><p><a href="https://webringofweird.github.io">[ webring of weird ]</a><br /><span>linking ' + sites.length + ' sites together</span></p></td>';
+		var centerTD = '<td class="wow-center"><p><a href="https://webringofweird.github.io">[ webring of weird ]</a><br /><span>linking ' + sites.length + ' sites together</span></p><input type="button" class="wow-random" value="take me to a random site" /></td>';
 
 		var index = findPosition(sites, ringURL);
 
 		if(index === -1) {
-			// render 'reduced' webring?
+			
+			// render 'reduced' webring
 			innerHTML += centerTD;
+
 		} else {
+
 			var prevIndex = --index < 0 ? sites.length - 1 : index;
 			var nextIndex = ++index === sites.length ? 0 : index;
-			console.log(prevIndex, nextIndex);
 
 			var prevSite = sites[prevIndex];
 			var nextSite = sites[nextIndex];
@@ -68,6 +70,12 @@
 
 		div.className = 'wow-root';
 		div.innerHTML = innerHTML;
+
+		var random = div.querySelector('.wow-random');
+		random.addEventListener('click', function() {
+			goRandom(sites);
+		});
+
 		
 		document.body.insertBefore(div, script.nextSibling);
 	}
@@ -82,6 +90,11 @@
 		return -1;
 	}
 
+	function goRandom(sites) {
+		var randIndex = Math.floor(Math.random() * sites.length);
+		var site = sites[randIndex];
+		window.location.url = site.url;
+	}
 
 	
 })();
