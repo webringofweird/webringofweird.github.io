@@ -93,7 +93,7 @@
 	function goRandom(sites) {
 		var randIndex = Math.floor(Math.random() * sites.length);
 		var site = sites[randIndex];
-		window.location.url = site.url;
+		document.location.href = site.url;
 	}
 
 	
