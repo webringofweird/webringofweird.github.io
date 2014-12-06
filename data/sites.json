@@ -9,6 +9,11 @@
 			"url": "http://tinyletter.com/todayinnews",
 			"title": "Today in Internet News",
 			"description": "Random quotes from various sources emanating via the pits of our hell"
+		},
+		{
+			"url": "https://sole.github.io/spoems",
+			"title": "Spoems",
+			"description": "Spam poems"
 		}
 	]
 }
